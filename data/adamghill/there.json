@@ -18,11 +18,18 @@
     "href": "https://minestrone.readthedocs.io",
     "name": "minestrone",
     "info": "Parse and modify messy HTML"
-  }, {
+  },
+  {
     "href": "https://django-fbv.readthedocs.io",
     "name": "django-fbv",
     "info": "Django function-based view utilities"
-  }, {
+  },
+  {
+    "href": "https://github.com/adamghill/transformd",
+    "name": "transformd",
+    "info": "Transform dictionaries"
+  },
+  {
     "href": "https://django-rich-logging.readthedocs.io",
     "name": "django-rich-logging",
     "info": "Tail Django requests"

@@ -1,0 +1,30 @@
+[
+  {
+    "href": "https://django-unicorn.com",
+    "name": "unicorn",
+    "info": "Reactive Django component library"
+  },
+  {
+    "href": "https://dlitejs.com",
+    "name": "dlite",
+    "info": "Reactive Web Components (JS)"
+  },
+  {
+    "href": "https://coltrane.readthedocs.io",
+    "name": "coltrane",
+    "info": "Hybrid static site generator"
+  },
+  {
+    "href": "https://minestrone.readthedocs.io",
+    "name": "minestrone",
+    "info": "Parse and modify messy HTML"
+  }, {
+    "href": "https://django-fbv.readthedocs.io",
+    "name": "django-fbv",
+    "info": "Django function-based view utilities"
+  }, {
+    "href": "https://django-rich-logging.readthedocs.io",
+    "name": "django-rich-logging",
+    "info": "Tail Django requests"
+  }
+]

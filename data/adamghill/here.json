@@ -1,0 +1,30 @@
+[
+  {
+    "href": "https://fediview.com",
+    "name": "fediview.com",
+    "info": "Algorithmic timeline for Mastodon"
+  },
+  {
+    "href": "https://devmarks.io",
+    "name": "devmarks.io",
+    "info": "Bookmarking for developers"
+  },
+  {
+    "href": "https://unsuckjs.com",
+    "name": "unsuckjs.com",
+    "info": "Progressively enhance HTML"
+  },
+  {
+    "href": "https://alldjango.com",
+    "name": "alldjango.com",
+    "info": "No bullshit help for perfectionists"
+  }, {
+    "href": "https://python-utils.adamghill.com",
+    "name": "python-utils.adamghill.com",
+    "info": "Python playground"
+  }, {
+    "href": "https://isitwebscale.adamghill.com",
+    "name": "isitwebscale.adamghill.com",
+    "info": "Is it web scale?!"
+  }
+]

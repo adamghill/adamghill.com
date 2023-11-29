@@ -138,34 +138,32 @@ version = "0.28.0"
 description = "A Dynamic Site Generator that harnesses the power of Django without the hassle 🎵."
 optional = false
 python-versions = ">=3.7,<4.0"
-files = []
-develop = true
+files = [
+    {file = "coltrane-0.28.0-py3-none-any.whl", hash = "sha256:8673550316a1dd6f0787fd72bf4a81434bbb92b011236b3963007db458425b53"},
+    {file = "coltrane-0.28.0.tar.gz", hash = "sha256:d6d772c3e95ee96359c1a16b1c729df6afe490f80f2c2d5dea3eb92ca4e18c4b"},
+]
 
 [package.dependencies]
-click = "^8.0.0"
-dateparser = "^1.1.0"
+click = ">=8.0.0,<9.0.0"
+dateparser = ">=1.1.0,<2.0.0"
 Django = ">3.0"
-django-browser-reload = "^1.3.0"
-django-fastdev = "^1.3.0"
-gunicorn = {version = "^20.1.0", optional = true}
-halo = "^0.0.31"
-markdown2 = "^2.4.2"
-minestrone = {version = ">=0.6.2", optional = true}
-mistune = {version = "^3.0.0rc4", optional = true}
-pygments = {version = ">=2.7.3", optional = true}
+django-browser-reload = ">=1.3.0,<2.0.0"
+django-fastdev = ">=1.3.0,<2.0.0"
+gunicorn = {version = ">=20.1.0,<21.0.0", optional = true, markers = "extra == \"deploy\""}
+halo = ">=0.0.31,<0.0.32"
+markdown2 = ">=2.4.2,<3.0.0"
+minestrone = {version = ">=0.6.2", optional = true, markers = "extra == \"mistune\""}
+mistune = {version = ">=3.0.0rc4,<4.0.0", optional = true, markers = "extra == \"mistune\""}
+pygments = {version = ">=2.7.3", optional = true, markers = "extra == \"mistune\""}
 python-dotenv = ">0.17"
-python-frontmatter = {version = "^1.0.0", optional = true}
-rich-click = "^0.2.0"
-whitenoise = {version = "^5.3.0", optional = true}
+python-frontmatter = {version = ">=1.0.0,<2.0.0", optional = true, markers = "extra == \"mistune\""}
+rich-click = ">=0.2.0,<0.3.0"
+whitenoise = {version = ">=5.3.0,<6.0.0", optional = true, markers = "extra == \"deploy\""}
 
 [package.extras]
 deploy = ["gunicorn (>=20.1.0,<21.0.0)", "whitenoise (>=5.3.0,<6.0.0)"]
 docs = ["Sphinx (>=4.3.2,<5.0.0)", "attrs (>=21.4.0,<22.0.0)", "furo (>=2021.11.23,<2022.0.0)", "linkify-it-py (>=1.0.3,<2.0.0)", "myst-parser (>=0.16.1,<0.17.0)", "sphinx-autobuild (>=2021.3.14,<2022.0.0)", "sphinx-copybutton (>=0.4.0,<0.5.0)", "toml"]
 mistune = ["minestrone (>=0.6.2)", "mistune (>=3.0.0rc4,<4.0.0)", "pygments (>=2.7.3)", "python-frontmatter (>=1.0.0,<2.0.0)"]
-
-[package.source]
-type = "directory"
-url = "../coltrane"
 
 [[package]]
 name = "dateparser"
@@ -1084,4 +1082,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "bf63cd2a983622de482f6161f62f4090b45877a1ea6a65fd11f192df371f073d"
+content-hash = "07c5e1fdd060269232e95df7f4da35b55f99a04e7f4304cb168b215980009490"

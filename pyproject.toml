@@ -7,8 +7,10 @@ authors = ["adamghill <adamghill@yahoo.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 coltrane = { version = "<1", extras = ["deploy", "mistune"] }
-glom = "^23.5.0"
-httpx = "^0.25.2"
+glom = "^23"
+httpx = "^0"
+django-unicorn = "^0.57.1"
+django-compressor = "^4.4"
 
 [tool.poetry.dev-dependencies]
 

@@ -7,6 +7,11 @@ from django.core.management import execute_from_command_line
 
 wsgi = initialize(
     GITHUB_PERSONAL_ACCESS_TOKEN=getenv("GITHUB_PERSONAL_ACCESS_TOKEN"),
+    INSTALLED_APPS=[
+        "compressor",
+        "django_unicorn",
+        "unicorn",
+    ],
 )
 
 if __name__ == "__main__":

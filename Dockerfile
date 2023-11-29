@@ -43,7 +43,7 @@ WORKDIR /app
 EXPOSE 80
 
 # Collect static assets
-RUN python manage.py collectstatic -v 2 --noinput
+RUN python app.py collectstatic -v 2 --noinput
 
 # Run gunicorn
 RUN gunicorn app:wsgi --config="gunicorn.conf.py"

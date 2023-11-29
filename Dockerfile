@@ -42,4 +42,8 @@ WORKDIR /app
 
 EXPOSE 80
 
-CMD ["sh", "/app/bin/post_compile"]
+# Collect static assets
+RUN python manage.py collectstatic -v 2 --noinput
+
+# Run gunicorn
+RUN gunicorn app:wsgi --config="gunicorn.conf.py"

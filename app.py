@@ -10,6 +10,7 @@ wsgi = initialize(
     # INSTALLED_APPS=[
     #     "compressor",  # this can get removed once django-compressor is supported automatically
     # ],
+    SECURE_PROXY_SSL_HEADER=("HTTP_X_FORWARDED_PROTO", "https"),
 )
 
 if __name__ == "__main__":

@@ -48,4 +48,6 @@ RUN python app.py collectstatic -v 2 --noinput
 # Run gunicorn
 # RUN gunicorn app:wsgi --config="gunicorn.conf.py"
 
-CMD ["sh", "gunicorn", "app:wsgi", "--config=gunicorn.conf.py]
+# ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0 --chdir=./src/"
+
+CMD ["gunicorn", "app:wsgi", "--config=gunicorn.conf.py]

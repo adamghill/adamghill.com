@@ -7,6 +7,7 @@ authors = ["adamghill <adamghill@yahoo.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 coltrane = { version = "<1", extras = ["deploy", "mistune"] }
+#coltrane = { path="../coltrane", develop=true, extras = ["deploy", "mistune"] }
 glom = "^23"
 httpx = "^0"
 django-unicorn = "^0.57.1"

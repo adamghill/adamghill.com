@@ -46,4 +46,6 @@ EXPOSE 80
 RUN python app.py collectstatic -v 2 --noinput
 
 # Run gunicorn
-RUN gunicorn app:wsgi --config="gunicorn.conf.py"
+# RUN gunicorn app:wsgi --config="gunicorn.conf.py"
+
+CMD ["sh", "gunicorn", "app:wsgi", "--config=gunicorn.conf.py]

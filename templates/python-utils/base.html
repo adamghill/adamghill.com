@@ -1,4 +1,4 @@
-{% load compress static unicorn %}
+{% load static unicorn %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,10 +40,8 @@
 
     {% unicorn_scripts %}
 
-    {% compress css %}
     <link rel="stylesheet" href="{% static 'css/bulma-0.9.4/bulma.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bulma-0.9.0/bulma-tooltip.min.css' %}">
-    {% endcompress %}
 
     {% block head_js %}
     {% endblock head_js %}

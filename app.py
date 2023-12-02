@@ -10,7 +10,18 @@ wsgi = initialize(
     # INSTALLED_APPS=[
     #     "compressor",  # this can get removed once django-compressor is supported automatically
     # ],
-    SECURE_PROXY_SSL_HEADER=("HTTP_X_FORWARDED_PROTO", "https"),
+    # SECURE_PROXY_SSL_HEADER=("HTTP_X_FORWARDED_PROTO", "https"),
+    MIDDLEWARE=[
+        "middleware.HTTPSOnlyMiddleware",
+        "whitenoise.middleware.WhiteNoiseMiddleware",
+        "django.middleware.security.SecurityMiddleware",
+        # "django.middleware.GZipMiddleware",
+        # "django.middleware.ConditionalGetMiddleware",
+        "django.middleware.common.CommonMiddleware",
+        # "django.middleware.csrf.CsrfViewMiddleware",
+        "django.middleware.clickjacking.XFrameOptionsMiddleware",
+        "django_browser_reload.middleware.BrowserReloadMiddleware",
+    ],
 )
 
 if __name__ == "__main__":

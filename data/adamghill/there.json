@@ -2,12 +2,7 @@
   {
     "href": "https://django-unicorn.com",
     "name": "unicorn",
-    "info": "Reactive Django component library"
-  },
-  {
-    "href": "https://dlitejs.com",
-    "name": "dlite",
-    "info": "Reactive Web Components (JS)"
+    "info": "Reactive component framework for Django"
   },
   {
     "href": "https://coltrane.readthedocs.io",
@@ -33,5 +28,10 @@
     "href": "https://django-rich-logging.readthedocs.io",
     "name": "django-rich-logging",
     "info": "Tail Django requests"
+  },
+  {
+    "href": "https://dlitejs.com",
+    "name": "dlite",
+    "info": "Reactive Web Components (JS)"
   }
 ]

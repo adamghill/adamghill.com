@@ -18,13 +18,20 @@
     "href": "https://alldjango.com",
     "name": "alldjango.com",
     "info": "No bullshit help for perfectionists"
-  }, {
-    "href": "https://python-utils.adamghill.com",
-    "name": "python-utils.adamghill.com",
+  },
+  {
+    "href": "/gitego",
+    "name": "GitEgo",
+    "info": "Learn about your GitHub repos"
+  },
+  {
+    "href": "/python-utils",
+    "name": "python-utils",
     "info": "Python playground"
-  }, {
-    "href": "https://isitwebscale.adamghill.com",
-    "name": "isitwebscale.adamghill.com",
-    "info": "Is it web scale?!"
+  },
+  {
+    "href": "/isitwebscale",
+    "name": "Is It Web Scale?!",
+    "info": "Discover the web scale-ness"
   }
 ]

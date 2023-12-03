@@ -134,13 +134,13 @@ files = [
 
 [[package]]
 name = "coltrane"
-version = "0.29.0"
+version = "0.30.0"
 description = "A Dynamic Site Generator that harnesses the power of Django without the hassle 🎵."
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "coltrane-0.29.0-py3-none-any.whl", hash = "sha256:ce1f5fa9af0c31e2326acb581fc014d4725d62d71e6aa11b47cd39fcc1e9cfad"},
-    {file = "coltrane-0.29.0.tar.gz", hash = "sha256:413cb6a1d22c5397974e474853c6cbaf41bface1232a777c2cf304c1f3d6fa2e"},
+    {file = "coltrane-0.30.0-py3-none-any.whl", hash = "sha256:99f17af1cef892e8a299a882e0285543c91a5715117b0cef08500dbef851025c"},
+    {file = "coltrane-0.30.0.tar.gz", hash = "sha256:097d8340c23a0bd9d8e090c1d4de074829d7d1614ea840e4de143a9c568fe278"},
 ]
 
 [package.dependencies]

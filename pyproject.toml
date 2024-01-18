@@ -12,6 +12,8 @@ glom = "^23"
 httpx = "^0"
 django-unicorn = "^0.57.1"
 django-compressor = "^4.4"
+redis = "^5.0.1"
+hiredis = "^2.3.2"
 
 [tool.poetry.dev-dependencies]
 

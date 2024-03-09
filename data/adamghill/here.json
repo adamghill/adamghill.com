@@ -2,7 +2,7 @@
   {
     "href": "https://fediview.com",
     "name": "fediview.com",
-    "info": "Algorithmic timeline for Mastodon"
+    "info": "Summary timeline for Mastodon"
   },
   {
     "href": "https://devmarks.io",
@@ -18,6 +18,16 @@
     "href": "https://alldjango.com",
     "name": "alldjango.com",
     "info": "No bullshit help for perfectionists"
+  },
+  {
+    "href": "https://djangobrew.com",
+    "name": "Django Brew Podcast",
+    "info": "A podcast about Django"
+  },
+  {
+    "href": "https://djangostickers.com",
+    "name": "Django Stickers",
+    "info": "Quirky Django stickers"
   },
   {
     "href": "/gitego",

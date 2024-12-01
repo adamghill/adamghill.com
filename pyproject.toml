@@ -1,21 +1,25 @@
-[tool.poetry]
-name = "adamghill.com"
+[project]
+name = "site"
 version = "0.1.0"
 description = ""
-authors = ["adamghill <adamghill@yahoo.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.9"
-coltrane = { version = "<1", extras = ["deploy", "mistune"] }
-#coltrane = { path="../coltrane", develop=true, extras = ["deploy", "mistune"] }
-glom = "^23"
-httpx = "^0"
-django-unicorn = "^0.57.1"
-django-compressor = "^4.4"
-redis = "^5.0.1"
-hiredis = "^2.3.2"
-
-[tool.poetry.dev-dependencies]
+requires-python = ">=3.10,<4.0"
+authors = [
+    { name = "adamghill", email = "adamghill@yahoo.com" },
+]
+dependencies = [
+  "coltrane[angles, compressor, deploy, json5] >= 0.37.0",
+  "glom>=23,<24",
+  "httpx>=0,<1",
+  "django-unicorn>=0.57.1,<0.58.0",
+  "django-compressor>=4.4,<5.0",
+  "redis>=5.0.1,<6.0.0",
+  "hiredis>=2.3.2,<3.0.0",
+  "iso8601 < 3",
+  "django-cache-memoize < 1",
+  "python-benedict < 1",
+  "refreshcss >= 0.5.1",
+  "emoji-data-python >= 1.6.0",
+]
 
 [tool.ruff]
 src = ["."]
@@ -84,10 +88,3 @@ ban-relative-imports = "all"
 [tool.ruff.per-file-ignores]
 # Tests can use magic values, assertions, and relative imports
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
-
-[tool.poe.tasks]
-r = { cmd = "coltrane play", help = "Start the dev server" }
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"

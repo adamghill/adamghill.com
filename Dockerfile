@@ -50,7 +50,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
     python app.py compress
 
 HEALTHCHECK --interval=1m --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://0.0.0.0:80 || exit 1
+  CMD curl -f http://0.0.0.0:80/static/svg/github.svg || exit 1
 
 # Run gunicorn
 CMD ["gunicorn", "app:wsgi", "--config=gunicorn.conf.py"]

@@ -21,6 +21,10 @@ dependencies = [
   "emoji-data-python >= 1.6.0",
 ]
 
+[tool.uv.sources]
+#coltrane = { path = "../coltrane", editable = true }
+#refreshcss = { path = "../refreshcss", editable = true }
+
 [tool.ruff]
 src = ["."]
 exclude = []

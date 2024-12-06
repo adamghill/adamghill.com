@@ -25,6 +25,7 @@ SITES = {
         "0.0.0.0:8021",
         "localhost:8021",
         "alldjango.localhost",
+        "alldjango.adamghill.com",
         "alldjango.com",
     ],
 }

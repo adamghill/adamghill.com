@@ -18,7 +18,8 @@ wsgi = initialize(
     COMPRESS_FILTERS=COMPRESS_FILTERS,
     COMPRESS_ENABLED=True,
 )
-
+print("wsgi", wsgi)
 
 if __name__ == "__main__":
+    print("called main")
     run()

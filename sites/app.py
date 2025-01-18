@@ -40,7 +40,7 @@ LOGGING = {
         },
     },
     "loggers": {
-        "": {"handlers": ["console"], "level": "INFO", "propagate": False},
+        "": {"handlers": ["console"], "level": "DEBUG", "propagate": False},
     },
 }
 

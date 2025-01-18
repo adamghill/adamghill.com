@@ -1,13 +1,17 @@
 # Layer with Python and some shared environment variables
-FROM python:3.12-slim-bullseye as python
+FROM python:3.12-slim-bullseye AS python
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
 # Layer for installing Python dependencies
-FROM python as dependencies
+FROM python AS dependencies
 
-ENV VIRTUAL_ENV=/opt/venv
+ENV VIRTUAL_ENV=/opt/venv \
+    UV_LINK_MODE=copy \
+    UV_COMPILE_BYTECODE=1 \
+    UV_PYTHON_DOWNLOADS=never \
+    UV_PYTHON=python3.12
 
 # Add some libraries sometimes needed for building Python dependencies, e.g. gcc
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,target=/var/lib/apt,sharing=locked \
@@ -29,7 +33,7 @@ RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.
 
 
 # Layer with only the Python dependencies needed for serving the app in production
-FROM python as production
+FROM python AS production
 
 # Copy over just the code
 COPY /site /site
@@ -50,7 +54,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
     python app.py compress
 
 HEALTHCHECK --interval=1m --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://0.0.0.0:80/static/css/sanitize.css || exit 1
+  CMD curl -Ssf -o /dev/null http://0.0.0.0:80/static/css/sanitize.css || exit 1
 
 # Run gunicorn
 CMD ["gunicorn", "app:wsgi", "--config=gunicorn.conf.py"]

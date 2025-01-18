@@ -189,7 +189,7 @@ wheels = [
 
 [[package]]
 name = "coltrane"
-version = "0.38.1"
+version = "0.38.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -208,9 +208,9 @@ dependencies = [
     { name = "pywatchman" },
     { name = "rich-click" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f1/3b/6bdc73fd9cd7ae4f5bda911ad36d3b92ca7c4a592e7d1172a3645126359b/coltrane-0.38.1.tar.gz", hash = "sha256:f53ee534c62e6e16fc4fc77c9b47b0a66c84f07cfb5df0d640f1e11f557222aa", size = 512212 }
+sdist = { url = "https://files.pythonhosted.org/packages/a4/69/a4d1aafd659e93c894f66d6f768100c10038647add0dde30e433bdf376d9/coltrane-0.38.3.tar.gz", hash = "sha256:84773d17b008ee8301099fcc0722a32a314f24ff7047b38354f3bc37530299c8", size = 512294 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/eb/57/708d77cfebac36dbe466b05690ab139d114a9e290b38f0e50502a2b4b922/coltrane-0.38.1-py3-none-any.whl", hash = "sha256:cc7c7bef6f475d39e677094df1f68a70197f4f12a8ae0073bb404e1d9c2241f7", size = 47671 },
+    { url = "https://files.pythonhosted.org/packages/19/94/ddbbe1da08ed17e5cf6f7b3839d88576f71a4d8cb0c05c3e1b53d43b2dd8/coltrane-0.38.3-py3-none-any.whl", hash = "sha256:fba1f90b4747607965f226e5247e7140042eb43de46d9b43403d1299fe6f547d", size = 47734 },
 ]
 
 [package.optional-dependencies]
@@ -1117,7 +1117,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "coltrane", extras = ["angles", "compressor", "deploy", "json5"], specifier = ">=0.38.1" },
+    { name = "coltrane", extras = ["angles", "compressor", "deploy", "json5"], specifier = ">=0.38.3" },
     { name = "django-cache-memoize", specifier = "<1" },
     { name = "django-compressor", specifier = ">=4.4,<5.0" },
     { name = "django-unicorn", specifier = ">=0.57.1,<0.58.0" },

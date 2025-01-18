@@ -1,0 +1,117 @@
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/* Forked from https://github.com/EvgenyOrekhov/holiday.css */
+
+:root {
+    color-scheme: light dark;
+
+    --border-color: #dbdbdb;
+    --border-hover-color: #b5b5b5;
+    --background-color: #fff;
+    --highlighted-background-color: #f5f5f5;
+    --text-color: #363636;
+    --danger-color: #f14668;
+    --danger-text-color: #fff;
+    --danger-hover-color: #f03a5f;
+    --success-color: #48c774;
+    --success-text-color: #fff;
+    --success-hover-color: #3ec46d;
+    --danger-text-background-color: #fde0e6;
+    --success-text-background-color: #effaf3;
+    --border-radius: 0.25rem;
+    --border-width: 1px;
+    --code-text-color: #f14668;
+    --code-background-color: #f5f5f5;
+    --link-color: #3273dc;
+    --link-visited-color: #b86bff;
+    --link-hover-color: #363636;
+    --link-active-color: #363636;
+}
+  
+@media (prefers-color-scheme: dark) {
+    :root {
+        --border-color: #5f6267;
+        --border-hover-color: #bcbebd;
+        --background-color: #202124;
+        --highlighted-background-color: #292b2e;
+        --text-color: #fff;
+        --danger-color: #770018;
+        --danger-text-color: #fff;
+        --danger-hover-color: #6b0015;
+        --success-color: #006624;
+        --success-text-color: #fff;
+        --success-hover-color: #006122;
+        --danger-text-background-color: #770018;
+        --success-text-background-color: #006624;
+        --code-text-color: #f1a0b0;
+        --code-background-color: #292b2e;
+        --link-color: #90b3ed;
+        --link-visited-color: #cb93ff;
+        --link-hover-color: #fff;
+        --link-active-color: #fff;
+    }
+}
+
+:root {
+    --max-body-width: 48rem;
+}
+
+body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 1rem);
+  max-width: var(--max-body-width);
+  min-height: 100%;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+input {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+    border-radius: var(--border-radius);
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+body > footer {
+  padding-bottom: 1rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: var(--border-width) solid var(--border-color);
+}
+
+[type="text"] {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: var(--border-width) solid var(--border-color);
+}
+
+[type="text"]:focus {
+  border-color: var(--border-hover-color);
+  outline: none;
+  box-shadow: 0 0 0.2rem 0.01rem var(--border-hover-color);
+}
+
+[type="text"]:enabled:hover {
+  border-color: var(--border-hover-color);
+}

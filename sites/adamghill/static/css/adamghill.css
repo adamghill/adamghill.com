@@ -1,0 +1,53 @@
+main {
+    display: flex;
+}
+
+header {
+    margin: 0.4em 1.4em 1.4em 1.4em;
+}
+
+section {
+    margin-left: auto;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    position: relative;
+    padding: 1.2em 2em .4em 2em;
+    border: 1px grey dashed;
+    width: 34em;
+    right: 2em;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+    border-bottom: 1px dashed grey;
+}
+
+h2 {
+    font-size: 16px;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2.info {
+    position: relative;
+    top: -0.6em;
+}
+
+ul {
+    padding: 0.6em 0 1em 1em;
+}
+
+.info {
+    cursor: help;
+    color: grey;
+    font-weight: normal;
+    padding-left: .4em;
+}
+
+.info::before {
+    padding-right: .2em;
+    content: '\27AF  ';
+}

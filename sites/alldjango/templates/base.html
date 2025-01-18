@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+
+    <title>{% if title %}{{ title }} | {% endif %}alldjango.com</title>
+
+    <link rel="stylesheet" href="{% static 'css/marx.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vs.css' %}">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@adamghill" />
+    {% if title %}
+    <meta name="twitter:title" content="{{ title|default:"alldjango" }}" />
+    {% endif %}
+    {% if description %}
+    <meta name="twitter:description" content="{{ description }}" />
+    {% endif %}
+
+    {% if not debug %}
+    <script defer data-domain="alldjango.com" src="https://plausible.io/js/plausible.js"></script>
+    {% endif %}
+</head>
+
+<body class="{{ slug }}">
+    <nav>
+        <ul>
+            <li>
+                <a href="/" class="brand">alldjango</a>
+            </li>
+            <li class="active">
+                <a href="/tips">Tips</a>
+            </li>
+            <li>
+                <a href="/articles">Articles</a>
+            </li>
+            <li>
+                <a href="https://djangostickers.com">Stickers</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="main">
+            <main {% if 'articles/' in request.path or 'tips/' in request.path and toc %}style="margin-right: -6px;"
+                {% endif %}>
+                {% if header_img %}
+                <img src="{% static header_img %}" style="border-bottom: 4px solid #FBB13C; vertical-align: bottom;" />
+                {% endif %}
+
+                <article>
+                    <div style="padding-bottom: 20px;">
+                        {% block content %}
+
+                        {% if title %}
+                        <h1 id="{{ title|slugify }}"><a href="/{{ slug|cut:"/index"|cut:"alldjango/" }}">{{ title }}</a>
+                        </h1>
+                        {% endif %}
+
+                        {{ content }}
+                        {% endblock content %}
+                    </div>
+
+                    <hr>
+
+                    {% if 'articles/' in request.path or 'tips/' in request.path %}
+                    <div style="padding-top: 20px;">
+                        {% include '_related_contents.html' %}
+                    </div>
+                    {% endif %}
+
+                    <div style="padding-top: 20px;">
+                        {% include_md '_hello.md' %}
+                    </div>
+                </article>
+
+                <footer>
+                    <p>
+                        <a href="https://indieweb.social/@adamghill" target="_blank">
+                            <img src="{% static 'img/mastodon.svg' %}" /></a>
+                        &nbsp;
+                        <a href="https://github.com/adamghill" target="_blank">
+                            <img src="{% static 'img/github.svg' %}" /></a>
+                        &nbsp;
+                        <a href="/rss.xml">
+                            <img src="{% static 'img/rss.svg' %}" /></a>
+                    </p>
+                    </br />
+
+                    <p>
+                        Made with 🤟 and built with <a href="https://coltrane.readthedocs.io"
+                            target="_blank">Coltrane</a> 🎵
+                    </p>
+                    </br />
+
+                    <p>
+                        &copy; Adam Hill
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        {% if 'articles/' in request.path or 'tips/' in request.path %}
+        <div class="sidebar">
+            {% if toc and toc != "" %}
+            <div class="toc">
+                <p style="padding-top: 10px; margin-left: 20px; font-variant: all-small-caps;">Table of Contents</p>
+
+                {{ toc|safe }}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            document.querySelectorAll("h2").forEach($heading => {
+                var id = $heading.getAttribute("id");
+                $heading.classList.add('anchor-heading');
+
+                var $anchor = document.createElement('a');
+                $anchor.className = 'anchor-link';
+                $anchor.href = '#' + id;
+                $anchor.innerText = '#';
+
+                $heading.appendChild($anchor);
+            })
+        })
+    </script>
+</body>
+
+</html>

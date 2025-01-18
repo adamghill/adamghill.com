@@ -1,0 +1,43 @@
+/* https://codepen.io/gfting/pen/abdyyjY */
+
+#spinner {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 8em;
+	animation-name: rotate;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes side-to-side-rotate {
+	0% {
+		transform: translateX(-100px);
+	}
+	50% {
+		transform: translateX(100px) rotate(180deg);
+	}
+	100% {
+		transform: translateX(-100px) rotate(-360deg);
+	}
+}
+
+@keyframes side-to-side-rotate-scale {
+	0% {
+		transform: translateX(-100px);
+	}
+	50% {
+		transform: translateX(100px) rotate(180deg) scale(10);
+	}
+	100% {
+		transform: translateX(-100px) rotate(-360deg);
+	}
+}

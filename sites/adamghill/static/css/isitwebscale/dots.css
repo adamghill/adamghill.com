@@ -1,0 +1,29 @@
+/* https://codepen.io/robgordon/pen/XgZMqo */
+
+.dot {
+    display: inline-block;
+    animation-name: bouncing;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+
+  .dot:nth-child(2) {
+    animation-delay: 150ms;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 300ms;
+  }
+  
+  @keyframes bouncing {
+    0% {
+      transform: none;
+    }
+    33% {
+      transform: translateY(-0.5em);
+    }
+    66% {
+      transform: none;
+    }
+  }

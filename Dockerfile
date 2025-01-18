@@ -36,13 +36,13 @@ RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.
 FROM python AS production
 
 # Copy over just the code
-COPY /site /site
+COPY /sites /sites
 
 # Copy over the virtualenv and add it to the path
 COPY --from=dependencies /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
-WORKDIR /site
+WORKDIR /sites
 
 EXPOSE 80
 

@@ -4,6 +4,7 @@ title: The definitive guide to using Django with SQLite in production
 date: 2025-01-18 10:33:16 -0400
 categories: django python sqlite sqlite3 litestack
 description: Run production Django sites with SQLite to reduce server costs and network latency.
+draft: false
 ---
 
 I have been running Django sites in production under heavy load for over 10 years at my day job. We started with a MySQL database backend but, after running into a few issues, switched to PostgreSQL which has been rock-solid. I tend to use the same stack for side projects. Especially because, initially, most of my projects were hosted on Heroku and they had stellar support for PostgreSQL. Now, having bounced from Heroku to Render to Fly.io to [Digital Ocean](https://m.do.co/c/617d629f56c0) (with [CapRover](https://caprover.com/)) to [Hetzner](https://hetzner.cloud/?ref=2SkHDuMdo4Vt) (with [Coolify](https://coolify.io)), I am re-evaluating my default choice of database.

@@ -7,7 +7,7 @@ authors = [
     { name = "adamghill", email = "adamghill@yahoo.com" },
 ]
 dependencies = [
-  "coltrane[angles, compressor, deploy, json5] >= 0.38.4",
+  "coltrane[angles, compressor, deploy, json5] >= 0.38.5",
   "glom>=23,<24",
   "httpx>=0,<1",
   "django-unicorn>=0.57.1,<0.58.0",

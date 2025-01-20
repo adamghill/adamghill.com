@@ -15,8 +15,20 @@ The websites for adamghill.com and alldjango.com. Built with `Coltrane` and â˜•ï
 
 1. `vim $(brew --prefix)/etc/Caddyfile`
 1. Add something like
+
 ```
 new-site.locahost {
     reverse_proxy localhost:8029
 }```
+
 1. `caddy validate --config $(brew --prefix)/etc/Caddyfile && brew services restart caddy`
+
+# Run Docker site
+
+1. `docker build -t adamghill . && docker run -e SECRET_KEY="secret" -e DEBUG=False -e COLTRANE_IS_SECURE=True -e ALLOWED_HOSTS="localhost,0.0.0.0" -p 8080:80 adamghill`
+
+# Run Docker site with local coltrane
+
+1. `cp -rf ../coltrane/* ./coltrane && docker build -t adamghill . && docker run -e SECRET_KEY="secret" -e DEBUG=False -e COLTRANE_IS_SECURE=True -e ALLOWED_HOSTS="localhost,0.0.0.0" -e CSRF_TRUSTED_ORIGINS="http://localhost:8080" -e COLTRANE_EXTRA_FILE_NAMES="robots.txt,isitwebscale.json" -p 8080:80 adamghill`
+
+

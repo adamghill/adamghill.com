@@ -27,6 +27,24 @@
     {% if not debug %}
     <script defer data-domain="alldjango.com" src="https://plausible.io/js/plausible.js"></script>
     {% endif %}
+
+    <style>
+        body main {
+            margin-right: -6px;
+        }
+
+        body.index main {
+            margin: 0 auto;
+        }
+
+        body[class="articles/index"] main {
+            margin: 0 auto;
+        }
+
+        body[class="tips/index"] main {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body class="{{ slug }}">
@@ -35,22 +53,24 @@
             <li>
                 <a href="/" class="brand">alldjango</a>
             </li>
-            <li class="active">
-                <a href="/tips">Tips</a>
-            </li>
             <li>
                 <a href="/articles">Articles</a>
             </li>
             <li>
-                <a href="https://djangostickers.com">Stickers</a>
+                <a href="/tips">Tips</a>
+            </li>
+            <li>
+                <a href="https://djangostickers.com">Django Stickers</a>
+            </li>
+            <li>
+                <a href="https://djangobrew.com">Django Brew Podcast</a>
             </li>
         </ul>
     </nav>
 
     <div class="wrapper">
         <div class="main">
-            <main {% if 'articles/' in request.path or 'tips/' in request.path and toc %}style="margin-right: -6px;"
-                {% endif %}>
+            <main>
                 {% if header_img %}
                 <img src="{% static header_img %}" style="border-bottom: 4px solid #FBB13C; vertical-align: bottom;" />
                 {% endif %}
@@ -60,7 +80,8 @@
                         {% block content %}
 
                         {% if title %}
-                        <h1 id="{{ title|slugify }}"><a href="/{{ slug|cut:"/index"|cut:"alldjango/" }}">{{ title }}</a>
+                        <h1 id="{{ title|slugify }}">
+                            <a href="/{{ slug|cut:'/index'|cut:'alldjango/' }}">{{ title }}</a>
                         </h1>
                         {% endif %}
 
@@ -108,7 +129,9 @@
         </div>
 
         {% if 'articles/' in request.path or 'tips/' in request.path %}
+
         <div class="sidebar">
+
             {% if toc and toc != "" %}
             <div class="toc">
                 <p style="padding-top: 10px; margin-left: 20px; font-variant: all-small-caps;">Table of Contents</p>
@@ -116,7 +139,9 @@
                 {{ toc|safe }}
             </div>
             {% endif %}
+
         </div>
+
         {% endif %}
     </div>
 

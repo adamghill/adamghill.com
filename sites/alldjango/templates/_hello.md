@@ -17,6 +17,7 @@
 - [fediview.com](https://fediview.com/): Generate a personalized summary from your Mastodon timeline
 - [devmarks.io](https://devmarks.io/): Bookmarking for Developers
 - [unsuckjs.com](https://unsuckjs.com/): A listing of JavaScript libraries to progressively enhance HTML
+- [filmcliq.com](https://filmcliq.com/): Follow films and get recommendations
 - [python-utils.adamghill.com](https://python-utils.adamghill.com/): The online playground for Python utilities
 
 ### Some of my OSS libraries
